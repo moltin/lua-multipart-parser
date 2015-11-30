@@ -1,4 +1,4 @@
-# lua-multipart
+# lua-multipart-parser
 
 A Lua library to parse `multipart/form-data` data.
 
@@ -10,22 +10,22 @@ local multipart_data = multipart()
 local data = multipart_data:get()
 ```
 
-This is an example of the headers for a multipart/form-data request that will be processed by our library
+And that's how our data will looks like after being parsed if we do the following request:
+
+![](http://blog.zot24.com/content/images/2015/11/Screen-Shot-2015-11-25-at-14-40-44.png)
 
 ```
---- more_headers
-Content-Type: multipart/form-data; boundary=---------------------------820127721219505131303151179
---- request eval
-qq{POST /t\n-----------------------------820127721219505131303151179\r
-Content-Disposition: form-data; name="file1"; filename="a.txt"\r
-Content-Type: text/plain\r
-\r
-Hello, world\r\n-----------------------------820127721219505131303151179\r
-Content-Disposition: form-data; name="test"\r
-\r
-value\r
-\r\n-----------------------------820127721219505131303151179--\r
+{
+  param1 = "data1",
+  param2 = "data2",
+  param3 = "data3"
 }
 ```
 
 # Contribute
+
+* Fork it the repository
+* Create your feature branch (git checkout -b my-new-feature)
+* Commit your changes (git commit -am 'Add some feature')
+* Push to the branch (git push origin my-new-feature)
+* Create a new Pull Request
