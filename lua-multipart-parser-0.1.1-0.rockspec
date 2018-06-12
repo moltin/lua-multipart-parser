@@ -1,8 +1,8 @@
 package = "lua-multipart-parser"
-version = "0.0.1-0"
+version = "0.1.1-0"
 source = {
   url = "git://github.com/moltin/lua-multipart-parser",
-  tag = "0.0.1-0"
+  tag = "0.1.1-0"
 }
 description = {
   summary = "A simple HTTP multipart encoder/decoder for Lua",
